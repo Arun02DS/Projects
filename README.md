@@ -1,6 +1,6 @@
-# Projects
+# Projects -------> Classification code with pipeline
 
-data = pd.read_csv('bank-full.csv', sep=';')
+### "data = pd.read_csv('bank-full.csv', sep=';')
 target = data.pop('y')
 target = target.map({'yes': 1, 'no':0})
 X_train, X_test, y_train, y_test = train_test_split(data, target, test_size=0.2, random_state=1234)
@@ -75,7 +75,7 @@ for classifier in classifiers:
     pipeline = Pipeline(steps)
     pipeline.fit(X_train, y_train)   
     print(classifier)
-    print("model score: %.3f" % pipeline.score(X_test, y_test))
+    print("model score: %.3f" % pipeline.score(X_test, y_test)) " ###
 
 
 
